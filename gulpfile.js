@@ -6,19 +6,25 @@ var concat = require('gulp-concat');
 var uglyfly = require('gulp-uglify');
 var rename = require('gulp-rename');
 var cleanCSS = require('gulp-clean-css');
- 
+
+// Minify CSS
+
 gulp.task('minify-css', function() {
   return gulp.src('css/**')
-    .pipe(cleanCSS({
+    .pipe(cleanCSS({                    // Minify CSS
         compatibility: 'ie8',
         processImport: true,
         inline: ['none']
     }))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(concat('styles.min.css'))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(rename({ suffix: '.min' })) // Rename file with .min
+    .pipe(concat('styles.min.css')) // All css files will concat in styles.min.css
+    .pipe(gulp.dest('dist/css')); // Destination, final result
 });
- 
+
+// END Minify CSS
+
+// Minify Images => Destination dist/...
+
 gulp.task('uploads', () =>
     gulp.src('uploads/**')
         .pipe(imagemin({
@@ -37,6 +43,10 @@ gulp.task('imagecache', () =>
         .pipe(gulp.dest('dist/imagecache'))
 );
 
+// END Minify Images
+
+// Minify JS
+
 gulp.task('compress', function() {
   gulp.src('js/*.js')
     .pipe(minify({
@@ -45,7 +55,9 @@ gulp.task('compress', function() {
         },
         exclude: ['tasks'],
     }))
-    .pipe(uglyfly())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist'))
+    .pipe(uglyfly()) // Minify JS
+    .pipe(rename({ suffix: '.min' })) // Rename files with the min
+    .pipe(gulp.dest('dist')) // Destination, final results
 });
+
+// END Minify JS
