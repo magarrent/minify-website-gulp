@@ -1,0 +1,38 @@
+{
+  "name": "minify-website-gulp",
+  "version": "1.0.0",
+  "description": "Minify website assets with gulp components . https://magarrent.com",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify": "^0.0.15",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgarcia96/minify-website-gulp.git"
+  },
+  "keywords": [
+    "gulp",
+    "miniy",
+    "website",
+    "css",
+    "js",
+    "assets"
+  ],
+  "author": "Marc Garcia Torrent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgarcia96/minify-website-gulp/issues"
+  },
+  "homepage": "https://github.com/mgarcia96/minify-website-gulp#readme"
+}
