@@ -10,7 +10,7 @@ var cleanCSS = require('gulp-clean-css');
 // Minify CSS
 
 gulp.task('minify-css', function() {
-  return gulp.src('css/**')
+  return gulp.src('css/**') // * All files === ** All files recursive
     .pipe(cleanCSS({                    // Minify CSS
         compatibility: 'ie8',
         processImport: true,
