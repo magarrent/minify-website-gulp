@@ -1,5 +1,5 @@
 # Minify Website Gulp
-Minify website assets with gulp components .  https://magarrent.com
+Minify website assets with gulp components .  https://blog.magarrent.com
 
 Just download the repository and run *npm install*
 
